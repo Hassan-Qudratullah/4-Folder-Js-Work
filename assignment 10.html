@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiples of 5</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    background-color: #f702a5;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d613ac;
+}
+
+#result {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Multiples of 5 from 1 to 100</h1>
+        <button id="showMultiplesButton" onclick="showMultiples()">Show Multiples of 5</button>
+        <div id="result"></div>
+    </div>
+    <script>
+function showMultiples() {
+    let resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = "";
+
+    let multiples = [];
+    for (let i = 1; i <= 100; i++) {
+        if (i % 5 === 0) {
+            multiples.push(i);
+        }
+    }
+
+    resultDiv.innerHTML = `Multiples of 5 from 1 to 100: <br><br> ${multiples.join(', ')}`;
+}
+
+    </script>
+</body>
+</html>

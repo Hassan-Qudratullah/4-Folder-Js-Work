@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Smallest Number</title>
+   <style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    background-color: #07f5cd;
+    color: rgb(5, 5, 5);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #22ced4;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+   </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Find the Smallest Number</h1>
+        <h5>24, 53, 78, 91, 12</h5>
+        <button id="findSmallestButton" onclick="findSmallest()">Find Smallest Number</button>
+        <p id="result"></p>
+    </div>
+    <script>
+function findSmallest() {
+    const A = [24, 53, 78, 91, 12];
+    let smallest = A[0];
+    
+    for(let i = 1; i < A.length; i++) {
+        if(A[i] < smallest) {
+            smallest = A[i];
+        }
+    }
+    
+    document.getElementById('result').innerText = `The smallest number is ${smallest}`;
+}
+
+    </script>
+</body>
+</html>

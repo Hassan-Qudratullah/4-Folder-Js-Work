@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Items</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#array-container {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 300px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+#array-output {
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div id="array-container">
+        <h1>Array Items</h1>
+        <div id="array-output"></div>
+    </div>
+    <script>
+
+const fruits = ["apple", "banana", "mango", "orange", "strawberry"];
+
+
+function printArrayItems(array) {
+    let output = '';
+
+   
+    for (let i = 0; i < array.length; i++) {
+        output += `Element at index ${i} is ${array[i]}\n`;
+    }
+
+   
+    document.getElementById('array-output').textContent = output;
+}
+
+
+printArrayItems(fruits);
+
+    </script>
+</body>
+</html>
